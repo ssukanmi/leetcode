@@ -26,16 +26,22 @@ func IsPalindrome(x int) bool {
 	if x < 0 {
 		return false
 	}
-	original := x
+	return x == reverseInt(x)
+}
+
+func reverseInt(i int) int {
 	reversed := 0
-	for x != 0 {
-		reversed = reversed*10 + x%10
-		x /= 10
+	for i != 0 {
+		reversed = reversed*10 + i%10
+		i /= 10
 	}
-	return original == reversed
+	return reversed
 }
 
 func IsPalindrome2(x int) bool {
+	if x < 0 {
+		return false
+	}
 	s := strconv.Itoa(x)
 	return s == reverseString(s)
 }
