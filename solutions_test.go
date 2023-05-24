@@ -53,3 +53,25 @@ func TestIsPalindrome(t *testing.T) {
 		t.Errorf("Result was incorrect for IsPalindrome test3, got: %t, exepected: %t.", actual3, expected3)
 	}
 }
+
+// Test IsPalindrome solution
+func TestRomanToInt(t *testing.T) {
+	input1 := "III"
+	expected1 := 3
+	actual1 := solutions.RomanToInt(input1)
+	if !reflect.DeepEqual(expected1, actual1) {
+		t.Errorf("Result was incorrect for RomanToInt test1, got: %d, exepected: %d.", actual1, expected1)
+	}
+	input2 := "LVIII"
+	expected2 := 58
+	actual2 := solutions.RomanToInt(input2)
+	if !reflect.DeepEqual(expected2, actual2) {
+		t.Errorf("Result was incorrect for RomanToInt test2, got: %d, exepected: %d.", actual2, expected2)
+	}
+	input3 := "MCMXCIV"
+	expected3 := 1994
+	actual3 := solutions.RomanToInt(input3)
+	if !reflect.DeepEqual(expected3, actual3) {
+		t.Errorf("Result was incorrect for RomanToInt test3, got: %d, exepected: %d.", actual3, expected3)
+	}
+}
