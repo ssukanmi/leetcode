@@ -54,7 +54,7 @@ func TestIsPalindrome(t *testing.T) {
 	}
 }
 
-// Test IsPalindrome solution
+// Test RomanToInt solution
 func TestRomanToInt(t *testing.T) {
 	input1 := "III"
 	expected1 := 3
@@ -73,5 +73,21 @@ func TestRomanToInt(t *testing.T) {
 	actual3 := solutions.RomanToInt(input3)
 	if !reflect.DeepEqual(expected3, actual3) {
 		t.Errorf("Result was incorrect for RomanToInt test3, got: %d, exepected: %d.", actual3, expected3)
+	}
+}
+
+// Test LongestCommonPrefix solution
+func TestLongestCommonPrefix(t *testing.T) {
+	input1 := []string{"flower", "flow", "flight"}
+	expected1 := "fl"
+	actual1 := solutions.LongestCommonPrefix(input1)
+	if !reflect.DeepEqual(expected1, actual1) {
+		t.Errorf("Result was incorrect for LongestCommonPrefix test1, got: %s, exepected: %s.", actual1, expected1)
+	}
+	input2 := []string{"dog", "racecar", "car"}
+	expected2 := ""
+	actual2 := solutions.LongestCommonPrefix(input2)
+	if !reflect.DeepEqual(expected2, actual2) {
+		t.Errorf("Result was incorrect for LongestCommonPrefix test2, got: %s, exepected: %s.", actual2, expected2)
 	}
 }
