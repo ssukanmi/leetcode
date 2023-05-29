@@ -36,7 +36,7 @@ func LongestCommonPrefix(strs []string) string {
 	return pref
 }
 
-func LongestCommonPrefi2(strs []string) string {
+func LongestCommonPrefix2(strs []string) string {
 	// if only one element return it
 	if len(strs) == 1 {
 		return strs[0]

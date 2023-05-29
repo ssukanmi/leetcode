@@ -91,3 +91,19 @@ func TestLongestCommonPrefix(t *testing.T) {
 		t.Errorf("Result was incorrect for LongestCommonPrefix test2, got: %s, exepected: %s.", actual2, expected2)
 	}
 }
+
+// Test GetConcatenation solution
+func TestGetConcatenation(t *testing.T) {
+	input1 := []int{1, 2, 1}
+	expected1 := []int{1, 2, 1, 1, 2, 1}
+	actual1 := solutions.GetConcatenation(input1)
+	if !reflect.DeepEqual(expected1, actual1) {
+		t.Errorf("Result was incorrect for GetConcatenation test1, got: %v, exepected: %v.", actual1, expected1)
+	}
+	input2 := []int{1, 3, 2, 1}
+	expected2 := []int{1, 3, 2, 1, 1, 3, 2, 1}
+	actual2 := solutions.GetConcatenation(input2)
+	if !reflect.DeepEqual(expected2, actual2) {
+		t.Errorf("Result was incorrect for GetConcatenation test2, got: %v, exepected: %v.", actual2, expected2)
+	}
+}
