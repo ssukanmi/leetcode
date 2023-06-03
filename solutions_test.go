@@ -107,3 +107,35 @@ func TestGetConcatenation(t *testing.T) {
 		t.Errorf("Result was incorrect for GetConcatenation test2, got: %v, exepected: %v.", actual2, expected2)
 	}
 }
+
+// Test BuildArray solution
+func TestBuildArray(t *testing.T) {
+	input1 := []int{0, 2, 1, 5, 3, 4}
+	expected1 := []int{0, 1, 2, 4, 5, 3}
+	actual1 := solutions.BuildArray(input1)
+	if !reflect.DeepEqual(expected1, actual1) {
+		t.Errorf("Result was incorrect for BuildArray test1, got: %v, exepected: %v.", actual1, expected1)
+	}
+	input2 := []int{5, 0, 1, 2, 3, 4}
+	expected2 := []int{4, 5, 0, 1, 2, 3}
+	actual2 := solutions.BuildArray(input2)
+	if !reflect.DeepEqual(expected2, actual2) {
+		t.Errorf("Result was incorrect for BuildArray test2, got: %v, exepected: %v.", actual2, expected2)
+	}
+}
+
+// Test ConvertTemperature solution
+func TestConvertTemperature(t *testing.T) {
+	input1 := 36.50
+	expected1 := []float64{309.65000, 97.70000}
+	actual1 := solutions.ConvertTemperature(input1)
+	if !reflect.DeepEqual(expected1, actual1) {
+		t.Errorf("Result was incorrect for ConvertTemperature test1, got: %v, exepected: %v.", actual1, expected1)
+	}
+	input2 := 122.11
+	expected2 := []float64{395.26000, 251.79800}
+	actual2 := solutions.ConvertTemperature(input2)
+	if !reflect.DeepEqual(expected2, actual2) {
+		t.Errorf("Result was incorrect for ConvertTemperature test2, got: %v, exepected: %v.", actual2, expected2)
+	}
+}
